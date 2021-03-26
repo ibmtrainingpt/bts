@@ -1,5 +1,7 @@
 package com.ibm.bts.entity;
 
+import java.util.Date;
+
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
@@ -13,6 +15,8 @@ public class Bug {
 	private String description;
 	@NotNull
 	private String status;
+	@NotNull
+	private Date date;
 
 	public String getId() {
 		return id;
@@ -37,4 +41,13 @@ public class Bug {
 	public void setStatus(String status) {
 		this.status = status;
 	}
+
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
 }

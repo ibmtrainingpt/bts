@@ -14,7 +14,7 @@ import com.ibm.bts.repo.BugRepository;
 @Service
 public class BugService {
 	@Autowired
-	BugRepository bugRepository;		//Dependency Injection
+	BugRepository bugRepository; // Dependency Injection
 
 	public String createBug(@Valid Bug bug) {
 		Bug savedBug = bugRepository.save(bug);
@@ -32,9 +32,9 @@ public class BugService {
 	public void updateOrder(@Valid Bug bug) {
 		bugRepository.save(bug);
 	}
-	
+
 	public void deleteBug(String bugId) {
 		bugRepository.deleteById(bugId);
 	}
-	
+
 }

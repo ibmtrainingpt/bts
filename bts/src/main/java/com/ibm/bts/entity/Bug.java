@@ -39,7 +39,13 @@ public class Bug {
 	}
 
 	public void setStatus(String status) {
-		this.status = status;
+		String[] statusArray = { "New", "Assigned", "Open", "Fixed", "Pending Retest", "Retest", "Reopen", "Verified",
+				"Closed", "Rejected", "Duplicate", "Deferred", "Not a Bug" };
+		for (String bugStatus : statusArray) {
+			if (bugStatus.equals(status)) {
+				this.status = status;
+			}
+		}
 	}
 
 	public Date getDate() {
